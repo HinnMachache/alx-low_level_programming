@@ -13,3 +13,6 @@ int main(void)
 		printf("%d", digit);
 	}
 	printf("\n");
+
+	return (0);
+}
