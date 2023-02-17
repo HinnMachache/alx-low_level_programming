@@ -6,20 +6,20 @@
 
 int main(void)
 {
-	char alph = 'a';
-	char ABET = 'A';
+	int ch;
+	int CH;
 
-	while (alph <= 'z')
+	for (ch = 'a'; ch <= 'z'; ch++)
 	{
-		putchar(alph);
-		alph++;
-			while (ABET <= 'Z')
-			{
-				putchar(ABET);
-				ABET++;
-				if (ABET == 'Z')
-					putchar('\n');
-			}
+		putchar(ch);
+	}
+	for (CH = 'A'; CH <= 'Z'; CH++)
+	{
+		putchar(CH);
+		if (CH == 'Z')
+		{
+			putchar('\n');
+		}
 	}
 
 	return (0);
