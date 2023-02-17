@@ -15,9 +15,11 @@ int main(void)
 		if (digit == '9')
 		{
 			for (alph = 'a'; alph <= 'f'; alph++)
+			{
 				putchar(alph);
 			if (alph == 'f')
 				putchar('\n');
+			}
 		}
 	}
 
