@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	char alph = 'z';
+	int alph = 'z';
 
 	for (; alph >= 'a'; alph--)
 	{
