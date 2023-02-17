@@ -6,9 +6,9 @@
 
 int main(void)
 {
-	int alph = 'z';
+	int alph; 
 
-	for (; alph >= 'a'; alph--)
+	for (alph = 'z'; alph >= 'a'; alph--)
 	{
 		putchar(alph);
 		if (alph == 'a')
