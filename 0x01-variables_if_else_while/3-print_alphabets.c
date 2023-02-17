@@ -13,8 +13,6 @@ int main(void)
 	{
 		putchar(alph);
 		alph++;
-		if (alph == 'z')
-		{
 			while (ABET <= 'Z')
 			{
 				putchar(ABET);
@@ -22,7 +20,6 @@ int main(void)
 				if (ABET == 'Z')
 					putchar('\n');
 			}
-		}
 	}
 
 	return (0);
