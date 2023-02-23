@@ -1,4 +1,5 @@
 #include "main.h"
+#include <ctype.h>
 /**
  * _isdigit - checks for a digit
  * @c: Parameter to be passed
@@ -7,8 +8,8 @@
 
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
-		return (1);
-	else
+	if (isdigit(c) == 0)
 		return (0);
+	else
+		return (1);
 }
