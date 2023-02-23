@@ -1,20 +1,20 @@
 #include "main.h"
 /**
- * more_numbers - ints 10 times the numbers, from 0 to 14.
+ *  more_numbers- prints alphabet 10 time.
  */
-
 void more_numbers(void)
 {
-	int n = 1;
-	int j;
+	char n;
+	int m = 1;
 
-	while (n <= 10)
+	while (m <= 10)
 	{
-		for (j = 0; j <= 14; j++)
-		{
-			_putchar(j + '0');
-		}
-		_putchar('\n');
-		n++;
+	for (n = '0'; n <= '14'; n++)
+	{
+		_putchar(n);
+		if (n == '14')
+			_putchar('\n');
+	}
+	m++;
 	}
 }
