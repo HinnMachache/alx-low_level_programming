@@ -1,21 +1,20 @@
 #include "main.h"
 /**
- * _strcmp - compares string
- * @s1: String 1
- * @s2: String 2
- * Return: Return 0, -tive or +tive
+ * _strcmp - compare two strings
+ * @s1: string to compare to s2
+ * @s2: string to concate to s1
+ * Return: Same 0, Different s1 - s2
  */
-
 int _strcmp(char *s1, char *s2)
 {
-	int compareStatus;
-
-	while ((*s1 != '\0' && *s2 != '\0') *s1 == *s2)
+	while (*s1 && *s2)
 	{
-		*s1++;
-		*s2++;
+		if (*s1 - *s2 != 0)
+		{
+			return (*s1 - *s2);
+		}
+		s1++;
+		s2++;
 	}
-	compareStatus = (*s1 == *s2) ? 0 : (*s1 > *s2) ? 1 : -1;
-
-	return (compareStatus);
+	return (0);
 }
