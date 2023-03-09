@@ -5,7 +5,7 @@
  * Return: Returns the result
  */
 
-int is_prime_numbers(int n)
+int is_prime_number(int n)
 {
 	static int i = 2;
 
@@ -18,5 +18,5 @@ int is_prime_numbers(int n)
 		return (0);
 	}
 	i++;
-	return (is_prime_numbers(n));
+	return (is_prime_number(n));
 }
