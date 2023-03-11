@@ -2,7 +2,7 @@
 #include <stdio.h>
 /**
  * main - prints number of arguments
- * Return: Always 00 success, non 0 - failure
+ * Return: Always 0 success, non 0 - failure
  * @argc: Number of arguments
  * @argv: Parameters
  */
