@@ -3,11 +3,12 @@
  * _pow_recursion - returns a value raised ttoa power
  * @x: Base number
  * @y: Index number
+ * Return: Return power of a number
  */
 
 int _pow_recursion(int x, int y)
 {
-	if (y < 0 )
+	if (y < 0)
 		return (-1);
 	if (y == 0)
 		return (1);
