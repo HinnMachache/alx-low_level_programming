@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Prints the name of th programm
  * @argc: Argument counter
@@ -9,7 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	printf("%s\n", argc);
+	printf("%d\n", argc);
 
 	rerturn(0);
 }
