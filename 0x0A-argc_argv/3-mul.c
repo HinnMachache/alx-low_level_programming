@@ -5,6 +5,7 @@
  * main - multplies integers
  * @args: First Parameter
  * @argv: Second Paramter
+ * Return: 0-succes,
  */
 
 int main(int args, char *argv[])
@@ -14,6 +15,7 @@ int main(int args, char *argv[])
 	if (args < 2)
 	{
 		printf("Error\n");
+		return (-1);
 	}
 	else
 	{
