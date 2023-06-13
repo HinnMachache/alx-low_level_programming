@@ -35,4 +35,5 @@ char *str_concat(char *s1, char *s2)
 		s1Counter++, s2Counter++;
 	}
 	concatPointer[s1Counter] = '\0';
+	return (concatPointer);
 }
