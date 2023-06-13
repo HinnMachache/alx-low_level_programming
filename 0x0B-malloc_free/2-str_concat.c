@@ -31,7 +31,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	while (s2[s2Counter] != '\0')
 	{
-		concatPointer[s2Counter] = s2[s2Counter];
+		concatPointer[s1Counter] = s2[s2Counter];
 		s1Counter++, s2Counter++;
 	}
 	concatPointer[s1Counter] = '\0';
