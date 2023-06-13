@@ -18,7 +18,7 @@ char *_strdup(char *str)
 	strPointer = malloc(length + 1);
 	if (strPointer == NULL)
 		return (NULL);
-	for (lengthCopy = 0; str(lengthCopy); lengthCopy++)
+	for (lengthCopy = 0; str[lengthCopy]; lengthCopy++)
 		strPointer[lengthCopy] = str[lengthCopy];
 	return (strPointer);
 }
