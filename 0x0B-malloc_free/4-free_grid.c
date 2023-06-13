@@ -2,14 +2,14 @@
 #include "main.h"
 /**
  * free_grid - frees 2d array
+ * @grid: Grid to be freed
  * @height: height dimension of grid
- * Return: Empty grid 
- *
+ * Return: Empty grid
  */
 void free_grid(int **grid, int height)
 {
 	int counter;
-		
+
 	for (counter = 0; counter < height; counter++)
 	{
 		free(grid[counter]);
