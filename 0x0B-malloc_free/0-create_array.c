@@ -19,6 +19,6 @@ char *create_array(unsigned int size, char c)
 	if (charPointer == NULL)
 		return (NULL);
 	for (counter = 0; counter < size; counter++)
-		*charPointer = c;
+		charPointer = c;
 	return (charPointer);
 }
