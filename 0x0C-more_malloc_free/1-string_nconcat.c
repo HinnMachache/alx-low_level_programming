@@ -31,13 +31,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		concatPointer[s1Counter] = s1[s1Counter];
 		s1Counter++;
 	}
-	while (n < s2Length && s2Counter < (s1Length + n))
+	while (n < s2Length && s1Counter < (s1Length + n))
 	{
 		concatPointer[s1Counter++] = s2[s2Counter++];
 	}
 	while (n >= s2Length && s1Counter < (s1Length + s2Length))
 	{
-		concatPointer[s1Counter] = s2[s2Counter];
+		concatPointer[s1Counter++] = s2[s2Counter++];
 	}
 	concatPointer[s1Counter] = '\0';
 	return (concatPointer);
