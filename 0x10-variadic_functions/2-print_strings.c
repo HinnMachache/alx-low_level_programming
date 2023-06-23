@@ -10,10 +10,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int counter;
 	char *string;
+	va_list string_args;
 
 	if (n == 0)
 		return;
-	va_list string_args;
 
 	va_start(string_args, n);
 	for (counter = 0; counter < n; counter++)

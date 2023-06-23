@@ -11,11 +11,10 @@ int sum_them_all(const unsigned int num, ...)
 {
 	unsigned int counter;
 	int num_grab, sum = 0;
+	va_list num_arrays;
 
 	if (num == 0)
 		return (0);
-	va_list num_arrays;
-
 	va_start(num_arrays, num);
 	for (counter = 0; counter < num; counter++)
 	{
