@@ -20,10 +20,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	for (counter = 0; counter < n; counter++)
 	{
 		num_grab = va_arg(num_args, int);
-		if (separator == NULL)
-			printf("%d ", num_grab);
-		else
-			printf("%d%s ", num_grab, separator);
+			printf("%d", num_grab);
+
+		if (counter != (n - 1) && separator != NULL)	
+			printf("%s", separator);
 	}
 	va_end(num_args);
 	printf("\n");

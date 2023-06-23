@@ -23,10 +23,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		string = va_arg(string_args, char *);
 		if (string == NULL)
 			string = "(nil)";
-		if (separator == NULL)
-			printf("%s ", string);
-		else
-			printf("%s%s ", string, separator);
+		printf("%s", string);
+		if (counter != (n - 1) && separator != NULL)
+			printf("%s", separator);
 	}
 	va_end(string_args);
 	printf("\n");
