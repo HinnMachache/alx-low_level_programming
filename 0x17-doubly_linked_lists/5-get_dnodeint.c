@@ -6,7 +6,7 @@
  * Return:  nth node of a listint_t linked list or NULL
  */
 
-listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
+dlistint_t *get_nodeint_at_index(dlistint_t *head, unsigned int index)
 {
 	unsigned int i;
 
