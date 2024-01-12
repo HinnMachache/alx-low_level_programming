@@ -6,9 +6,9 @@
  * @n: value to be held in the new inserted node
  * Return: address to the new node or NULL incase of failure
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	listint_t *new, *holder = *head;
+	listint_t *new, *holder = *h;
 	unsigned int i;
 
 	new = malloc(sizeof(listint_t));
@@ -18,7 +18,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	if (idx == 0)
 	{
 		new->next = holder;
-		*head = new;
+		*h = new;
 		return (new);
 	}
 
