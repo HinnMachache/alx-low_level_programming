@@ -1,35 +1,35 @@
 #include "lists.h"
+
 /**
- * insert_nodeint_at_index -inserts new node at a given position
- * @head: pointer to the head of a listint-t list
- * @idx: position to insert the node
- * @n: value to be held in the new inserted node
- * Return: address to the new node or NULL incase of failure
+ * delete_nodeint_at_index - deletes the node at index index
+ * of a listint_t linked list
+ * @index: index of the node that should be deleted
+ * @head: pointer to the head of a listint_t list
+ * Return: 1 if it succeeded, -1 if it failed
  */
-listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
+int delete_nodeint_at_index(dlistint_t **head, unsigned int index)
 {
-	listint_t *new, *holder = *head;
+	listint_t *holder, *copy = *head;
 	unsigned int i;
 
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	if (idx == 0)
+	if (copy == NULL)
+		return (-1);
+	if (index == 0)
 	{
-		new->next = holder;
-		*head = new;
-		return (new);
+		*head = (*head)->next;
+		free(copy);
+		return (1);
 	}
 
-	for (i = 0; i < (idx - 1); i++)
+	for (i = 0; i < (index - 1); i++)
 	{
-		if (holder == NULL || holder->next == NULL)
-			return (NULL);
-		holder = holder->next;
+		if (copy->next == NULL)
+			return (-1);
+		copy = copy->next;
 	}
-	new->next = holder->next;
-	holder->next = new;
 
-	return (new);
+	holder = copy->next;
+	copy->next = holder->next;
+	free(holder);
+	return (1);
 }
